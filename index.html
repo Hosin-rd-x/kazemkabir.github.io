@@ -1,43 +1,48 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hosin RD X</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: #0f0f0f;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f0f0f;
       color: #fff;
-      font-family: 'Courier New', monospace;
       text-align: center;
+      overflow-x: hidden;
     }
 
-    .section {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 1s ease-out;
+    section {
+      padding: 80px 20px;
     }
 
-    .section.visible {
-      opacity: 1;
-      transform: translateY(0);
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      color: #ff3f81;
     }
 
+    h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    /* Typewriter effect */
     .typewriter {
       overflow: hidden;
-      border-right: .15em solid #fff;
+      border-right: .15em solid #ff3f81;
       white-space: nowrap;
-      animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+      animation: typing 3s steps(30, end), blink-caret .75s step-end infinite;
+      font-family: 'Courier New', monospace;
       font-size: 1.5em;
-      max-width: 90%;
+      color: #fff;
     }
 
     @keyframes typing {
@@ -47,49 +52,56 @@
 
     @keyframes blink-caret {
       from, to { border-color: transparent }
-      50% { border-color: white }
-    }
-
-    .links a {
-      display: block;
-      margin: 10px 0;
-      color: #00ffff;
-      text-decoration: none;
-      font-size: 1.2em;
-      transition: color 0.3s;
-    }
-
-    .links a:hover {
-      color: #ff00ff;
+      50% { border-color: #ff3f81 }
     }
   </style>
 </head>
 <body>
 
-  <div class="section" id="bio">
-    <div class="typewriter">Live in the moment, don’t think about the end</div>
-  </div>
+  <!-- Hero Section -->
+  <section id="hero">
+    <h1>Hosin RD X</h1>
+    <p>Live in the moment, don't think about the end</p>
+  </section>
 
-  <div class="section" id="links">
-    <div class="links">
-      <a href="https://instagram.com/hosin_rd_x" target="_blank">Instagram: @hosin_rd_x</a>
-      <a href="https://t.me/Hosinrdx" target="_blank">Telegram: @Hosinrdx</a>
-      <a href="mailto:hosin1386.rd.x@gmail.com">Email: hosin1386.rd.x@gmail.com</a>
-    </div>
-  </div>
+  <!-- Social Sections -->
+  <section data-aos="fade-up">
+    <h2>Instagram</h2>
+    <p>@hosin_rd_x</p>
+  </section>
 
+  <section data-aos="fade-up">
+    <h2>Telegram</h2>
+    <p>@Hosinrdx</p>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>Email</h2>
+    <p>hosin1386.rd.x@gmail.com</p>
+  </section>
+
+  <!-- Final Message -->
+  <section id="final" data-aos="fade-up">
+    <h2 class="typewriter">دنبال چیز دیگه‌ای می‌کردی :)</h2>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    const sections = document.querySelectorAll('.section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.3 });
+    AOS.init();
+  </script>
 
-    sections.forEach(section => {
-      observer.observe(section);
+  <!-- Vanta Background -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.124.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
+  <script>
+    VANTA.NET({
+      el: "#hero",
+      color: 0xff3f81,
+      backgroundColor: 0x0f0f0f,
+      points: 12.0,
+      maxDistance: 20.0,
+      spacing: 18.0
     });
   </script>
 
