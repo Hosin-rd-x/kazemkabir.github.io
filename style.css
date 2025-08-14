@@ -1,75 +1,56 @@
 body {
   margin: 0;
-  font-family: sans-serif;
-  display: flex;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.section {
   height: 100vh;
-}
-
-.sidebar {
-  width: 250px;
-  background: #fff;
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.profile-pic {
-  width: 120px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 20px 0;
-}
-
-nav a {
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-}
-
-footer {
-  margin-top: auto;
-  font-size: 12px;
-  color: #888;
-  text-align: center;
-}
-
-.main {
-  flex: 1;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  color: white;
+  transition: background 1s ease-in-out;
+  text-align: center;
+  padding: 20px;
 }
 
-.main h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
+.first {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
 }
 
-.main p {
-  font-size: 16px;
-  margin-bottom: 20px;
+.instagram {
+  background: radial-gradient(circle, #ff007f, #1a1a1a);
 }
 
-.btn {
+.telegram {
+  background: radial-gradient(circle, #00bfff, #1a1a1a);
+}
+
+.email {
+  background: radial-gradient(circle, #00ff99, #1a1a1a);
+}
+
+.about {
+  background: radial-gradient(circle, #ff9900, #1a1a1a);
+}
+
+.final {
+  background: radial-gradient(circle, #ff0033, #1a1a1a);
+}
+
+button, a {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
   padding: 10px 20px;
-  border: 2px solid #000;
+  margin-top: 15px;
+  color: white;
   text-decoration: none;
-  color: #000;
-  font-weight: bold;
-  margin-bottom: 30px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
 }
 
-.main-pic {
-  max-width: 300px;
-  border-radius: 10px;
+button:hover, a:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
