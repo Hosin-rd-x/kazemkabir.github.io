@@ -2,26 +2,65 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>کاظم کبیر</title>
+  <title>سایت حسین</title>
   <style>
-    body {
-      font-family: Tahoma, sans-serif;
-      background-color: #111;
-      color: #fff;
+    @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      font-family: 'Vazirmatn', sans-serif;
+      color: white;
+      overflow: hidden;
+    }
+    /* ویدئوی پس‌زمینه */
+    .bg-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.4);
+    }
+    /* متن خوش‌آمدگویی */
+    .welcome {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
       text-align: center;
-      padding: 50px;
+      font-size: 3rem;
+      white-space: nowrap;
     }
-    h1 {
-      color: #00ffcc;
-      font-size: 2.5em;
+    .typing {
+      border-right: .15em solid #fff;
+      animation: typing 4s steps(30, end), blink .75s step-end infinite;
+      overflow: hidden;
     }
-    p {
-      font-size: 1.2em;
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      from, to { border-color: transparent }
+      50% { border-color: white }
     }
   </style>
 </head>
 <body>
-  <h1>سلام، من کاظم کبیر هستم</h1>
-  <p>به وب‌سایت شخصی من خوش آمدید</p>
+  <!-- ویدئو پس‌زمینه -->
+  <video autoplay muted loop class="bg-video">
+    <source src="https://cdn.pixabay.com/video/2017/10/25/12279-239173857_large.mp4" type="video/mp4">
+  </video>
+
+  <!-- متن خوش آمد -->
+  <div class="welcome">
+    <div class="typing">به سایت حسین خوش اومدی 🌟</div>
+  </div>
 </body>
 </html>
