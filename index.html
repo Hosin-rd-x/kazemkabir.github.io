@@ -1,32 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kazem Kabir</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 0.3em;
+      letter-spacing: 1px;
+    }
+    p.bio {
+      font-style: italic;
+      font-size: 1.2em;
+      margin-bottom: 2em;
+      color: #ccc;
+    }
+    .social-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .social-links a {
+      padding: 12px 24px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .social-links a:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
-  <div class="sidebar">
-    <img src="your-photo.jpg" alt="Kazem" class="profile-pic" />
-    <h1>Kazem</h1>
-    <nav>
-      <a href="#">HOME</a>
-      <a href="#">ABOUT</a>
-      <a href="#">SERVICES</a>
-      <a href="#">WORK</a>
-      <a href="#">BLOG</a>
-      <a href="#">CONTACT</a>
-    </nav>
-    <footer>
-      <p>© 2025 Kazem Kabir. All rights reserved.</p>
-    </footer>
-  </div>
-  <div class="main">
-    <h2>I am Kazem</h2>
-    <p>100% pure HTML & CSS. No kits. No nonsense.</p>
-    <a href="#" class="btn">VIEW PORTFOLIO</a>
-    <img src="your-photo.jpg" alt="Kazem full" class="main-pic" />
+  <h1>Kazem Kabir</h1>
+  <p class="bio">Live in the moment, don't think about the end.</p>
+  <div class="social-links">
+    <a href="https://instagram.com/hosin_rd_x" target="_blank">Instagram</a>
+    <a href="https://t.me/Hosinrdx" target="_blank">Telegram</a>
+    <a href="mailto:hosin1386.rd.x@gmail.com">Email</a>
   </div>
 </body>
 </html>
